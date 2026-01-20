@@ -1,0 +1,75 @@
+style.css
+
+:root {
+    --main-blue: #003366;
+    --sub-blue: #006699;
+    --accent-blue: #E6F2F7;
+    --bg-white: #F0F5F9;
+    --text-dark: #333;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0; padding: 0;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+}
+
+.header {
+    background: #fff;
+    border-bottom: 2px solid var(--main-blue);
+    padding: 10px 0;
+    position: sticky; top: 0; z-index: 100;
+}
+
+.header-container {
+    max-width: 1100px; margin: 0 auto; padding: 0 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+.logo { display: flex; align-items: center; gap: 15px; }
+.logo img { height: 70px; }
+.site-title h1 { font-family: 'Playfair Display', serif; margin: 0; color: var(--main-blue); font-size: 1.6rem; }
+.site-title p { margin: 0; font-size: 0.8rem; color: var(--sub-blue); letter-spacing: 1px; }
+
+.nav-button {
+    padding: 10px 20px; border: 1px solid var(--main-blue);
+    background: #fff; color: var(--main-blue);
+    cursor: pointer; font-weight: bold; border-radius: 4px; transition: 0.3s;
+}
+.nav-button.active { background: var(--main-blue); color: #fff; }
+
+.main-content { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+.selection-box { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.select
+ion-box h2 { font-size: 1.1rem; margin-top: 0; color: var(--main-blue); border-left: 4px solid var(--main-blue); padding-left: 10px; }
+
+.area-buttons, .filter-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.area-button, .tag-button {
+    padding: 8px 16px; border-radius: 20px; border: 1px solid #ddd;
+    background: #fff; cursor: pointer; transition: 0.3s; font-size: 0.9rem;
+}
+.area-button.active { background: var(--sub-blue); color: #fff; border-color: var(--sub-blue); }
+.tag-button.active { background: var(--main-blue); color: #fff; border-color: var(--main-blue); }
+.tag-button.core { border-color: var(--sub-blue); color: var(--sub-blue); font-weight: bold; }
+.tag-button.core.active { background: var(--sub-blue); color: #fff; }
+
+.facility-card {
+    background: #fff; border-radius: 8px; overflow: hidden;
+    margin-bottom: 20px; display: flex; flex-direction: column;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-left: 5px solid var(--sub-blue);
+}
+.card-content { padding: 20px; }
+.card-content h3 { margin: 0 0 10px 0; color: var(--main-blue); }
+.highlight { font-weight: bold; color: #d9534f; margin-bottom: 10px; }
+.address, .official-site { font-size: 0.85rem; margin-bottom: 5px; color: #666; display: block; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 15px; }
+.tag-chip { font-size: 0.75rem; padding: 3px 10px; border-radius: 10px; background: var(--accent-blue); color: var(--sub-blue); }
+
+.footer { text-align: center; padding: 40px; background: var(--main-blue); color: #fff; font-size: 0.8rem; }
+
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; text-align: center; }
+    .logo { margin-bottom: 15px; }
+}
